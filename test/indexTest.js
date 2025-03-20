@@ -1,3 +1,31 @@
+const employee = {
+    name: "John Doe",
+    streetAddress: "123 Main St"
+};
+
+function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
+  employee[key] = value; // Modifies the original object
+  return employee;
+}
+
+function deleteFromEmployeeByKey(employee, key) {
+  const newEmployee = { ...employee }; // Clone the employee object
+  delete newEmployee[key]; // Remove the key from the new object
+  return newEmployee;
+}
+
+function deleteFromEmployeeByKey(employee, key) {
+  const newEmployee = { ...employee }; // Clone the employee object
+  delete newEmployee[key]; // Remove the key from the new object
+  return newEmployee; // Return the new object without the deleted key
+}
+
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+  delete employee[key]; // Modifies the original object
+  return employee; // Returns the updated object
+}
+
+
 require ( './helpers.js' );
 
 describe('employees', function() {
